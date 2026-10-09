@@ -1,0 +1,10 @@
+{
+  "description": "Effortlessly capture and store important details in real-time, ensuring users can easily reference and manage information until completion.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
