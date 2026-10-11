@@ -253,7 +253,7 @@ export default function App() {
             <div className="contact-options">
               <a href={whatsappLink("مرحباً، أود الاستفسار عن المنتجات")} target="_blank" rel="noreferrer"><span><Icon name="whatsapp" /></span><p><small>واتساب الأعمال</small><strong><bdi>71845751</bdi></strong></p><Icon name="chevron" /></a>
               <a href="mailto:qatarhomeproduct@gmail.com"><span><Icon name="mail" /></span><p><small>البريد الإلكتروني</small><strong>qatarhomeproduct@gmail.com</strong></p><Icon name="chevron" /></a>
-              <a href="https://www.google.com/maps/search/Islamic+Exchange/@25.3715027,51.2320585,787m/data=!3m1!1e3?hl=en&entry=ttu" target="_blank" rel="noreferrer"><span><Icon name="location" /></span><p><small>موقعنا</small><strong>مشيرب داون تاون، الدوحة</strong></p><Icon name="chevron" /></a>
+              <a href="https://www.google.com/maps/search/Islamic+Exchange/@25.3715027,51.2320585,787m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer"><span><Icon name="location" /></span><p><small>موقعنا</small><strong>الشحانية، قطر</strong></p><Icon name="chevron" /></a>
             </div>
           </div>
         </section>
@@ -263,7 +263,7 @@ export default function App() {
         <div className="container footer-grid">
           <div className="footer-brand"><Brand light /><p>اختيارات موثوقة لمنزلك ورحلتك، مع توصيل مجاني وخدمة سريعة داخل الدوحة.</p></div>
           <div><strong className="footer-title">روابط سريعة</strong><a href="#products">المنتجات</a><a href="#prices">الأسعار</a><a href="#about">من نحن</a></div>
-          <div><strong className="footer-title">تواصل معنا</strong><a href={`tel:+${whatsappNumber}`}><Icon name="phone" size={17} /> <bdi>+974 7184 5751</bdi></a><a href="mailto:qatarhomeproduct@gmail.com"><Icon name="mail" size={17} /> البريد الإلكتروني</a><span><Icon name="location" size={17} /> مشيرب، الدوحة، قطر</span></div>
+          <div><strong className="footer-title">تواصل معنا</strong><a href={`tel:+${whatsappNumber}`}><Icon name="phone" size={17} /> <bdi>+974 7184 5751</bdi></a><a href="mailto:qatarhomeproduct@gmail.com"><Icon name="mail" size={17} /> البريد الإلكتروني</a><span><Icon name="location" size={17} /> الشحانية، قطر</span></div>
         </div>
         <div className="container footer-bottom"><span>© 2026 شركة قطر للمنتجات المنزلية. جميع الحقوق محفوظة.</span><span>صُنع بعناية في قطر</span></div>
       </footer>
