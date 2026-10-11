@@ -1,4 +1,5 @@
 import { useState } from "react";
+import qatarLogo from "./assets/qatar-home-products-logo.png";
 import stargoldTrolley from "./assets/products/stargold-trolley.png";
 import vipTrolley from "./assets/products/vip-trolley.png";
 import blanketBonded from "./assets/products/blanket-bonded.png";
@@ -46,19 +47,25 @@ function Icon({ name, size = 20 }: { name: IconName; size?: number }) {
   return <svg aria-hidden="true" className="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>;
 }
 
-function Brand({ light = false }: { light?: boolean }) {
+function Brand({ light = false, navbarLogo = false }: { light?: boolean; navbarLogo?: boolean }) {
   return (
     <div className={`brand ${light ? "brand-light" : ""}`}>
-      <svg className="brand-mark" viewBox="0 0 64 64" role="img" aria-label="شعار قطر للمنتجات المنزلية">
-        <path className="mark-shell" d="M7 29 32 8l25 21v25a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V29Z" />
-        <path className="mark-handle" d="M23 31v-3a9 9 0 0 1 18 0v3" />
-        <path className="mark-case" d="M19 31h26v19H19z" />
-        <path className="mark-line" d="M26 31v19M38 31v19" />
-      </svg>
-      <div className="brand-copy">
-        <strong>قطر للمنتجات المنزلية</strong>
-        <span>QATAR HOME PRODUCTS</span>
-      </div>
+      {navbarLogo ? (
+        <img className="brand-logo" src={qatarLogo} alt="Qatar Home Products" />
+      ) : (
+        <>
+          <svg className="brand-mark" viewBox="0 0 64 64" role="img" aria-label="شعار قطر للمنتجات المنزلية">
+            <path className="mark-shell" d="M7 29 32 8l25 21v25a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V29Z" />
+            <path className="mark-handle" d="M23 31v-3a9 9 0 0 1 18 0v3" />
+            <path className="mark-case" d="M19 31h26v19H19z" />
+            <path className="mark-line" d="M26 31v19M38 31v19" />
+          </svg>
+          <div className="brand-copy">
+            <strong>قطر للمنتجات المنزلية</strong>
+            <span>QATAR HOME PRODUCTS</span>
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -113,7 +120,7 @@ export default function App() {
 
       <header className="header">
         <div className="container header-inner">
-          <a className="brand-link" href="#home" aria-label="الرئيسية"><Brand /></a>
+          <a className="brand-link" href="#home" aria-label="الرئيسية"><Brand navbarLogo /></a>
           <nav className={`nav ${mobileNav ? "nav-open" : ""}`} aria-label="التنقل الرئيسي">
             <a href="#home" onClick={() => setMobileNav(false)}>الرئيسية</a>
             <a href="#products" onClick={() => setMobileNav(false)}>المنتجات</a>
@@ -135,8 +142,8 @@ export default function App() {
           <div className="hero-orb hero-orb-one" />
           <div className="hero-orb hero-orb-two" />
           <div className="container hero-grid">
-            <div className="hero-content">
-              <div className="eyebrow"><span /> اختيارات أفضل لمنزل أجمل</div>
+          <div className="hero-content">
+            <div className="eyebrow"><span /> اختيارات أفضل لمنزل أجمل</div>
               <h1>كل ما يحتاجه <em>منزلك ورحلتك</em> في مكان واحد</h1>
               <p>منتجات منزلية مختارة، حقائب سفر متينة، ومستلزمات شبكة موثوقة بجودة تستحقها وأسعار تناسبك.</p>
               <div className="hero-actions">
