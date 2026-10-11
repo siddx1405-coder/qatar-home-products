@@ -19,6 +19,7 @@
 
 # Vercel must receive the actual product images rather than Git LFS pointers.
 src/assets/products/*.png -filter -diff -merge !text
+public/qatar-home-products-logo.png -filter -diff -merge !text
 
 # ---------------------------------------------------------------------------
 # Video
